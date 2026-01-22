@@ -1,0 +1,446 @@
+/* ========================================
+   AEROWISECONCEPT - Styles complémentaires
+   ======================================== */
+
+/* Variables spécifiques AeroWise (harmonisation avec Water Wise) */
+:root {
+    --aero-primary: #0066cc;
+    --aero-secondary: #00a8e8;
+    --aero-dark: #003d7a;
+    --aero-accent: #4dabf7;
+    --aero-light-bg: #f0f8ff;
+}
+
+/* ========================================
+   NAVIGATION - Style actif AeroWise
+   ======================================== */
+.nav-aero {
+    font-weight: 600;
+    color: var(--aero-primary) !important;
+}
+
+.nav-aero.active {
+    border-bottom: 3px solid var(--aero-primary);
+    padding-bottom: 0.5rem;
+}
+
+/* ========================================
+   BREADCRUMB (Fil d'Ariane)
+   ======================================== */
+.breadcrumb {
+    background: var(--light-bg);
+    padding: 1rem 0;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.breadcrumb .separator {
+    margin: 0 0.75rem;
+    color: #999;
+}
+
+.breadcrumb .current {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/* ========================================
+   HERO SECTION - Style AeroWise
+   ======================================== */
+.hero-aero {
+    background: linear-gradient(135deg, var(--aero-primary) 0%, var(--aero-dark) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-aero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h100v100H0z" fill="none"/><path d="M50 20L60 40 80 40 65 52 70 70 50 58 30 70 35 52 20 40 40 40z" fill="rgba(255,255,255,0.05)"/></svg>');
+    background-size: 150px 150px;
+    opacity: 0.3;
+}
+
+.hero-aero .hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-icon {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    opacity: 0.95;
+}
+
+/* ========================================
+   POURQUOI LE DRONE
+   ======================================== */
+.pourquoi-drone {
+    padding: 5rem 0;
+    background: var(--aero-light-bg);
+}
+
+.pourquoi-drone h2 {
+    font-size: 2.5rem;
+    color: var(--aero-primary);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.avantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.avantage-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 4px solid var(--aero-primary);
+}
+
+.avantage-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 102, 204, 0.2);
+}
+
+.avantage-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.avantage-card h3 {
+    color: var(--aero-dark);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.avantage-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+/* ========================================
+   DOMAINES D'INTERVENTION
+   ======================================== */
+.domaines-section {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.domaines-section h2 {
+    font-size: 2.5rem;
+    color: var(--aero-primary);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.domaines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.domaine-card {
+    background: var(--light-bg);
+    border-radius: 12px;
+    padding: 2.5rem;
+    border-left: 5px solid var(--aero-secondary);
+    transition: border-color 0.3s;
+}
+
+.domaine-card:hover {
+    border-left-color: var(--aero-primary);
+}
+
+.domaine-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.domaine-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.domaine-card h3 {
+    color: var(--aero-dark);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.domaine-description {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.domaine-liste {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.domaine-liste li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.domaine-liste li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--aero-primary);
+    font-weight: bold;
+}
+
+.domaine-liste strong {
+    color: var(--aero-dark);
+}
+
+.coming-soon {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #fff3cd;
+    color: #856404;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.btn-secondary {
+    background: var(--aero-secondary);
+}
+
+.btn-secondary:hover {
+    background: var(--aero-primary);
+}
+
+/* ========================================
+   NOTRE DIFFÉRENCE
+   ======================================== */
+.difference-section {
+    padding: 5rem 0;
+    background: var(--aero-light-bg);
+}
+
+.difference-section h2 {
+    font-size: 2.5rem;
+    color: var(--aero-primary);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.difference-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.difference-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.difference-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.difference-item h3 {
+    color: var(--aero-dark);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.difference-item p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+/* ========================================
+   ZONE D'INTERVENTION AERO
+   ======================================== */
+.zone-intervention-aero {
+    padding: 4rem 0;
+    background: var(--white);
+}
+
+.zone-intervention-aero h2 {
+    font-size: 2.5rem;
+    color: var(--aero-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.zone-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--light-bg);
+    padding: 2.5rem;
+    border-radius: 10px;
+    border-left: 5px solid var(--aero-primary);
+}
+
+.zone-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.zone-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* ========================================
+   CTA SECTION
+   ======================================== */
+.cta-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--aero-primary) 0%, var(--aero-dark) 100%);
+    color: var(--white);
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section > p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+.btn-outline:hover {
+    background: var(--white);
+    color: var(--aero-primary);
+}
+
+.cta-note {
+    margin-top: 2rem;
+    opacity: 0.9;
+}
+
+.cta-note small {
+    font-size: 0.95rem;
+}
+
+/* ========================================
+   RESPONSIVE - Mobile & Tablet
+   ======================================== */
+@media (max-width: 768px) {
+    .hero-icon {
+        font-size: 3.5rem;
+    }
+    
+    .hero-aero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-aero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .avantages-grid,
+    .domaines-grid,
+    .difference-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn-large {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .domaine-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* ========================================
+   PRINT STYLES (bonus)
+   ======================================== */
+@media print {
+    .navbar,
+    .breadcrumb,
+    .cta-section,
+    footer {
+        display: none;
+    }
+    
+    .hero-aero {
+        background: var(--white);
+        color: var(--text-color);
+    }
+}
